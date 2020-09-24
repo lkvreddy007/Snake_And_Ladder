@@ -6,6 +6,7 @@ public class SnakeAndLadder {
 	static final int LADDER=1;
 	static final int SNAKE=2;
 	static int[] position_numdieroll=new int[2];
+	
 	public static int position_update(int position,int dice_value,int check_value) {
 		if(check_value==NO_PLAY) {
 			
@@ -37,6 +38,7 @@ public class SnakeAndLadder {
 		}
 		return position;
 	}
+	
 	public static int[] roll(int position,int n,int noofdierolls) {
 		
 		int dice_value=1+(int) Math.floor(Math.random()*10)%6;
@@ -47,15 +49,18 @@ public class SnakeAndLadder {
 		
 		position=position_update(position,dice_value,check_value);
 		System.out.println("Current position of player "+n+": "+position+"\n");
+		
 		if(position<100) {
 		if(check_value==1) {
 			noofdierolls+=1;
 			roll(position,n,noofdierolls);
 		}}
+		
 		position_numdieroll[0]=position;
 		position_numdieroll[1]=noofdierolls;
 		return position_numdieroll;
 	}
+	
 	public static void main(String[] args) {
 		int position_1=START_POSITION;
 		int position_2=START_POSITION;
