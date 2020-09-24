@@ -66,10 +66,13 @@ public class SnakeAndLadder {
 		int position_2=START_POSITION;
 		System.out.println("Welcome to Snake and Ladder game");
 		boolean b= true;
+
 		int[] values=new int[2];
 		int no_of_die_rolls=0;
+    
 		while(b) {
 			no_of_die_rolls+=1;
+
 			
 			System.out.println("Player 1:");
 			
@@ -96,7 +99,7 @@ public class SnakeAndLadder {
 		}
 	
 	
-		//System.out.println("player has won the game");
+
 		System.out.println("Number of die rolls :"+no_of_die_rolls);
 	}
 }
