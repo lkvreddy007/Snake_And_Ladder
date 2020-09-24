@@ -6,31 +6,39 @@ public class SnakeAndLadder {
 	static final int LADDER=1;
 	static final int SNAKE=2;
 	public static void main(String[] args) {
+		int position=START_POSITION;
 		System.out.println("Welcome to Snake and Ladder game");
 		
-		int dice_value=1+(int) Math.floor(Math.random()*10)%6;
-		System.out.println("Dice value :"+dice_value);
-
-		int check_value=(int) Math.floor(Math.random()*10)%3;
-		System.out.println("Check Value :"+check_value);
-		
-		int position=START_POSITION;
-		
-		if(check_value==NO_PLAY) {
+		while(position<=100) {
+			int dice_value=1+(int) Math.floor(Math.random()*10)%6;
+			System.out.println("Dice value :"+dice_value);
+	
+			int check_value=(int) Math.floor(Math.random()*10)%3;
+			System.out.println("Check Value :"+check_value);
 			
-		}
-		else if(check_value== LADDER){
-			position+=dice_value;
-		}
-		else {
-			if(position==START_POSITION) {
+			
+			
+			if(check_value==NO_PLAY) {
 				
 			}
-			else {
-			position-=dice_value;
+			else if(check_value== LADDER){
+				position+=dice_value;
 			}
-		}
-		System.out.println("Current position :"+position);
+			else {
+				position-=dice_value;
+				if(position<=START_POSITION) {
+					position=START_POSITION;
+				}
+				else {
+				   
+				}
+			}
+			System.out.println("Current position :"+position+"\n");
 		
+		}
+	
+	
+		System.out.println("player has won the game");
+	
 	}
 }
