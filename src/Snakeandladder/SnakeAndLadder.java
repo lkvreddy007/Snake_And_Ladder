@@ -78,6 +78,7 @@ public class SnakeAndLadder {
 			
 			values=roll(position_1,1,no_of_die_rolls);
 			position_1=values[0];
+			
 			no_of_die_rolls=values[1];
 			
 			if(position_1==100 ) {
