@@ -10,22 +10,13 @@ public class SnakeAndLadder {
 	public static int position_update(int position,int dice_value,int check_value) {
 		if(check_value==NO_PLAY) {
 			
-		}
-		
+		}		
 		else if(check_value== LADDER){
 			position+=dice_value;
 			
 			if(position>100) {
 				position=position-dice_value;
-			}
-			
-//			else if(position==100) {
-//				b=false;
-//			}
-//			else{
-//				
-//			}
-			
+			}			
 		}
 		else {
 			position-=dice_value;
@@ -71,16 +62,11 @@ public class SnakeAndLadder {
 		int no_of_die_rolls=0;
     
 		while(b) {
-			no_of_die_rolls+=1;
-
-			
+			no_of_die_rolls+=1;	
 			System.out.println("Player 1:");
-			
 			values=roll(position_1,1,no_of_die_rolls);
 			position_1=values[0];
-			
 			no_of_die_rolls=values[1];
-			
 			if(position_1==100 ) {
 				b=false;
 				System.out.println("Player 1 has won the game");
@@ -91,8 +77,6 @@ public class SnakeAndLadder {
 			values=roll(position_2,2,no_of_die_rolls);
 			position_2=values[0];
 			no_of_die_rolls=values[1];
-			
-			
 			if(position_2==100) {
 				b=false;
 				System.out.println("Player 2 has won the game");
