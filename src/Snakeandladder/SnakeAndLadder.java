@@ -82,9 +82,6 @@ public class SnakeAndLadder {
 				System.out.println("Player 2 has won the game");
 			}
 		}
-	
-	
-
 		System.out.println("Number of die rolls :"+no_of_die_rolls);
 	}
 }
