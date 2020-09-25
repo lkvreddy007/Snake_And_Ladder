@@ -82,7 +82,7 @@ public class SnakeAndLadder {
 				System.out.println("Player 1 has won the game");
 				break;
 			}
-			
+			no_of_die_rolls+=1;
 			System.out.println("Player 2");
 			values=roll(position_2,2,no_of_die_rolls);
 			position_2=values[0];
