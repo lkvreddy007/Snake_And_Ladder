@@ -78,6 +78,7 @@ public class SnakeAndLadder {
 			
 			values=roll(position_1,1,no_of_die_rolls);
 			position_1=values[0];
+			
 			no_of_die_rolls=values[1];
 			
 			if(position_1==100 ) {
@@ -85,7 +86,7 @@ public class SnakeAndLadder {
 				System.out.println("Player 1 has won the game");
 				break;
 			}
-			
+			no_of_die_rolls+=1;
 			System.out.println("Player 2");
 			values=roll(position_2,2,no_of_die_rolls);
 			position_2=values[0];
