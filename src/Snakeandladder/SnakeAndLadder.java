@@ -12,11 +12,13 @@ public class SnakeAndLadder {
 	public int position_update(int position,int dice_value,int check_value) {
 		if(check_value==NO_PLAY) {
 			
-		}
+		}		
+
 		else if(check_value== LADDER){
 			position+=dice_value;
 			if(position>100) {
 				position=position-dice_value;
+
 			}
 		}
 		else {
