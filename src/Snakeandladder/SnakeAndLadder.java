@@ -13,7 +13,6 @@ public class SnakeAndLadder {
 		if(check_value==NO_PLAY) {
 			
 		}		
-
 		else if(check_value== LADDER){
 			position+=dice_value;
 			if(position>100) {
