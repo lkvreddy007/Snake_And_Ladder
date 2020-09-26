@@ -46,7 +46,6 @@ public class SnakeAndLadder {
 		
 		if(position<100) {
 			if(check_value==1) {
-				noofdierolls+=1;
 				roll(position,n,noofdierolls);
 			}
 		}
